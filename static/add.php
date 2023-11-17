@@ -92,7 +92,7 @@
             <div class="card-header">Add New Contact</div>
             <?php if($error): ?>
               <p class="text-danger">
-                <?php $error ?>
+                <?= $error ?>
               </p>
             <?php endif ?>
             <div class="card-body">
