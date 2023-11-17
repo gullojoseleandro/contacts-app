@@ -1,3 +1,12 @@
+<?php
+
+  if($_SERVER["REQUEST_METHOD"] == ["POST"]) {
+    var_dump($_POST);
+    die();
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,7 +64,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="./index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./add.html">Add contact</a>
@@ -73,7 +82,7 @@
             <div class="card">
               <div class="card-header">Add New Contact</div>
               <div class="card-body">
-                <form>
+                <form method="POST" action="./add.php">
                   <div class="mb-3 row">
                     <label
                       for="name"
