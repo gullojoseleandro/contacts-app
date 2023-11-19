@@ -68,8 +68,7 @@
     <main>
       <div class="container pt-4 p-3 mt-4">
         <div class="row">
-          <?php include "static/contactCardEmpty.php"?>
-          <?php include "static/contactCardCharged.php"?>
+
         </div>
       </div>
     </main>
