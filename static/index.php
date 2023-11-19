@@ -1,5 +1,5 @@
 <?php
-  require "/home/user/contacts-app/static/database.php";
+  require "./contacts-app/static/database.php";
 
   $contacts = $conn->query("SELECT * FROM contacts");
 
