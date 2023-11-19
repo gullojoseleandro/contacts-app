@@ -1,5 +1,5 @@
-<?php require "static/database.php"?>
-<?php include "static/contact.php"?>
+<?php require "/home/user/contacts-app/static/database.php"?>
+<?php include "/home/user/contacts-app/static/contact.php"?>
 
 
 <!DOCTYPE html>
