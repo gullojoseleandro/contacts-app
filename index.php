@@ -76,6 +76,28 @@
     <main>
       <div class="container pt-4 p-3 mt-4">
         <div class="row">
+        <?php if($rows->rowCOUNT() == 0): ?>
+          <div class="col-md-4 mx-auto mt-5">
+            <div class="card card-body text-center">
+              <div class="card-body">
+                <p class="m-2">No contacts saved yet</p>
+                <a href="add.php">Add one!</a>
+              </div>
+            </div>
+          </div>
+        <?php endif ?>
+        <?php foreach ($rows as $contact): ?>
+          <div class="col-md-4 mb-3 mt-5">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="card-title text-capitalize"><?= $contact["name"]?> </h3>
+                <p class="m-2"><?= $contact["phone_number"]?></p>
+                <a href="#" class="btn btn-secondary mb-2">Edit Contact</a>
+                <a href="#" class="btn btn-danger mb-2">Delete Contact</a>
+              </div>
+            </div>
+          </div>
+        <?php endforeach ?>
 
         </div>
       </div>
