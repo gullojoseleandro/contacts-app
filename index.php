@@ -1,3 +1,6 @@
+<?php require "static/database.php"?>
+<?php include "static/contact.php"?>
+
 
 <!DOCTYPE html>
 <html lang="en">
