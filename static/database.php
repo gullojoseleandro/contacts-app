@@ -7,12 +7,9 @@ $password = "XxkvYUf7jVK6";
 
 try {
   $conn = new PDO("pgsql:host=$host;dbname=$database", $user, $password);
-  // foreach($conn ->query("SHOW DATABASES") as $row){
-  //   print_r($conn);
-  // }
-  // die();
+  echo "Conexión exitosa a la base de datos PostgreSQL";
 }catch(PDOException $e) {
-  die("PDO Connection Error: " . $e-> getMessage());
+  die("Error al conectar a la base de datos: " . $e-> getMessage());
 }
 
 ?>
