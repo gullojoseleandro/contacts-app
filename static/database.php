@@ -6,7 +6,7 @@ $user = "default";
 $password = "XxkvYUf7jVK6";
 
 try {
-  $conn = new PDO('mysql:host=ep-square-bar-06850403-pooler.us-east-1.postgres.vercel-storage.com;dbname=verceldb', $user, $password);
+  $conn = new PDO("pgsql:host=ep-square-bar-06850403-pooler.us-east-1.postgres.vercel-storage.com;dbname=verceldb;user=default;password=XxkvYUf7jVK6");
 
 
   echo "Conexión exitosa a la base de datos PostgreSQL";
