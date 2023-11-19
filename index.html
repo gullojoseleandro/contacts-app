@@ -1,7 +1,5 @@
-<?php
-  require "./contacts-app/static/database.php";
-  $contacts = $conn->query("SELECT * FROM contacts");
-?>
+<?php require "static/database.php";?>
+<?php include "static/contact.php";?>
 
 
 <!DOCTYPE html>
@@ -21,7 +19,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <!-- Static Content -->
     <link rel="stylesheet" href="css/index.css">
     <title>Contacts App</title>
   </head>
@@ -65,10 +62,8 @@
                 <a class="nav-link" href="./add.html">Add contact</a>
               </li>
               <li class="nav-item dropdown">
-                
               </li>
             </ul>
-            
           </div>
         </div>
       </div>
@@ -76,28 +71,8 @@
     <main>
       <div class="container pt-4 p-3 mt-4">
         <div class="row">
-          <?php if($contacts->rowCOUNT() == 0): ?>
-          <div class="col-md-4 mx-auto mt-5">
-              <div class="card card-body text-center">
-                <div class="card-body">
-                  <p class="m-2">No contacts saved yet</p>
-                  <a href="add.php">Add one!</a>
-                </div>
-              </div>
-            </div>
-          <?php endif ?>
-          <?php foreach ($contacts as $contact): ?>
-            <div class="col-md-4 mb-3 mt-5">
-              <div class="card text-center">
-                <div class="card-body">
-                  <h3 class="card-title text-capitalize"><?= $contact["name"]?> </h3>
-                  <p class="m-2"><?= $contact["phone_number"]?></p>
-                  <a href="#" class="btn btn-secondary mb-2">Edit Contact</a>
-                  <a href="#" class="btn btn-danger mb-2">Delete Contact</a>
-                </div>
-              </div>
-            </div>
-          <?php endforeach ?>
+          <?php include "static/contactCardEmpty.php"?>
+          <?php include "static/contactCardCharged.php"?>
         </div>
       </div>
     </main>
