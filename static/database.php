@@ -1,9 +1,9 @@
 <?php 
 
-$host = "localhost";
-$database = "contacts_app";
-$user = "root";
-$password = "";
+$host = "ep-square-bar-06850403-pooler.us-east-1.postgres.vercel-storage.com";
+$database = "verceldb";
+$user = "default";
+$password = "XxkvYUf7jVK6";
 
 try {
   $conn = new PDO("mysql:host=$host;dbname=$database", $user, $password);
