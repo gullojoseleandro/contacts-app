@@ -6,7 +6,7 @@ $user = "default";
 $password = "XxkvYUf7jVK6";
 
 try {
-  $conn = new PDO("pgsql:host=$host;dbname=$database", $user, $password);
+  $conn = new PDO("postgres://default:XxkvYUf7jVK6@ep-square-bar-06850403.us-east-1.postgres.vercel-storage.com:5432/verceldb");
   // foreach($conn ->query("SHOW DATABASES") as $row){
   //   print_r($conn);
   // }
