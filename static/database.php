@@ -1,18 +1,15 @@
 <?php 
 
-$host = "localhost";
-$database = "contacts_app";
-$user = "root";
-$password = "";
+$host = "ep-square-bar-06850403-pooler.us-east-1.postgres.vercel-storage.com";
+$database = "verceldb";
+$user = "default";
+$password = "XxkvYUf7jVK6";
 
 try {
-  $conn = new PDO("mysql:host=$host;dbname=$database", $user, $password);
-  // foreach($conn ->query("SHOW DATABASES") as $row){
-  //   print_r($conn);
-  // }
-  // die();
+  $conn = new PDO("pgsql:host=$host;dbname=$database;user=$user;password=$password");
+  echo "Conexión exitosa a la base de datos PostgreSQL";
 }catch(PDOException $e) {
-  die("PDO Connection Error: " . $e-> getMessage());
+  die("Error al conectar a la base de datos: " . $e-> getMessage());
 }
 
 ?>
