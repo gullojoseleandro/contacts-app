@@ -1,6 +1,6 @@
 <?php
 
-  require "./contacts-app/static/database.php";
+  require "database.php";
   $error = null;
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
